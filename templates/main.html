@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+    <h1>User Sign-Up</h1>
+    
+    <form action='/signup' method='POST'> 
+        
+        <label><span class='form_label'>Username</span>
+            <input name="username" type="text" value='{{username}}' /><p class="error">{{username_error}}</p>
+        </label>
+        
+        
+        <label><span class="form_label">Password</span>
+            <input name="password" type="password" value='{{password}}' />
+        </label>
+        <p class="error">{{password_error}}</p>
+        
+        <label><span class="form_label">Validate Password</span>
+            <input name="password_validate" type="password" value='{{password_validate}}' />
+        </label>
+        <p class="error">{{password_validate_error}}</p> 
+        
+        <label><span class="form_label">E-mail (optional)</span>
+            <input name="email" type="text" value='{{email}}' />
+        </label>
+        <p class="error">{{email_error}}</p>
+        
+        <input class="submit" type="submit" value="Submit" />
+    
+    </form>
+
+{% endblock %}
